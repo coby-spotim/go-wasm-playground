@@ -3,7 +3,7 @@ package window
 import "syscall/js"
 
 type window struct {
-	js.Value
+	value js.Value
 }
 
 func Window() *window {
@@ -12,10 +12,10 @@ func Window() *window {
 
 // Alert creates a popup alert in the browser with the requested method
 func (w *window) Alert(message string) {
-	w.Call("alert", message)
+	w.value.Call("alert", message)
 }
 
 // Document returns the document object on the current window
 func (w *window) Document() js.Value {
-	return w.Get("document")
+	return w.value.Get("document")
 }
