@@ -9,5 +9,5 @@ func main() {
 	window := Window()
 	document := Document()
 	window.Alert("Hello, World!")
-	println(document.Get("location").Get("href").String())
+	println(document.DocumentURI())
 }
