@@ -7,7 +7,9 @@ type window struct {
 }
 
 func Window() *window {
-	return &window{js.Global()}
+	return &window{
+		value: js.Global(),
+	}
 }
 
 // Alert creates a popup alert in the browser with the requested method
