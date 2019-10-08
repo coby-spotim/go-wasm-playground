@@ -1,9 +1,11 @@
 package main
 
 import (
-	"github.com/coby-spotim/wasm-playground/internal/window"
+	. "github.com/coby-spotim/wasm-playground/internal/document"
+	. "github.com/coby-spotim/wasm-playground/internal/window"
 )
 
 func main() {
-	window.Alert("Hello, World!")
+	Window().Alert("Hello, World!")
+	println(Document().Get("location").Get("href").String())
 }
