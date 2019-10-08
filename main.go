@@ -6,6 +6,8 @@ import (
 )
 
 func main() {
-	Window().Alert("Hello, World!")
-	println(Document().Get("location").Get("href").String())
+	window := Window()
+	document := Document()
+	window.Alert("Hello, World!")
+	println(document.Get("location").Get("href").String())
 }

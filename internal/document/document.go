@@ -1,15 +1,12 @@
 package document
 
-import (
-	"syscall/js"
-
-	. "github.com/coby-spotim/wasm-playground/internal/window"
-)
+import "syscall/js"
 
 type document struct {
 	js.Value
 }
 
+// Document returns a struct representing the Document interface in the Browser
 func Document() *document {
-	return &document{Window().Document()}
+	return &document{js.Global().Get("document")}
 }
