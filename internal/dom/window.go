@@ -1,4 +1,4 @@
-package window
+package dom
 
 import "syscall/js"
 

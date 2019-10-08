@@ -1,4 +1,4 @@
-package document
+package dom
 
 import "syscall/js"
 
@@ -7,9 +7,9 @@ type document struct {
 }
 
 // Document returns a struct representing the Document interface in the Browser
-func Document() *document {
+func Document(w *window) *document {
 	return &document{
-		value: js.Global().Get("document"),
+		value: w.Document(),
 	}
 }
 
