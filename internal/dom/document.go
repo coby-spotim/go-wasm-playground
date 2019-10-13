@@ -4,12 +4,17 @@ import "syscall/js"
 
 type document struct {
 	value js.Value
+	EventTarget
 }
 
 // Document returns a struct representing the Document interface in the Browser
 func NewDocument(w *window) *document {
+	d := w.Document()
 	return &document{
-		value: w.Document(),
+		value: d,
+		EventTarget: EventTarget{
+			value: d,
+		},
 	}
 }
 
