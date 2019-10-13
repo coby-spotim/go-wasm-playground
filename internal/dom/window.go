@@ -6,7 +6,7 @@ type window struct {
 	value js.Value
 }
 
-func Window() *window {
+func NewWindow() *window {
 	return &window{
 		value: js.Global(),
 	}

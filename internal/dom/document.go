@@ -7,7 +7,7 @@ type document struct {
 }
 
 // Document returns a struct representing the Document interface in the Browser
-func Document(w *window) *document {
+func NewDocument(w *window) *document {
 	return &document{
 		value: w.Document(),
 	}
