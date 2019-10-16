@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/coby-spotim/wasm-playground/internal/dom"
+	"github.com/coby-spotim/wasm-playground/internal/dom/eventListener"
 )
 
 func main() {
@@ -10,6 +11,6 @@ func main() {
 	document := dom.NewDocument(window)
 	window.Alert("Hello, World!")
 	println(document.DocumentURI())
-	document.AddEventListener("test", &dom.ConsoleLogEventListener{}, dom.EventListenerOptions{}, false, false)
+	document.AddEventListener("test", &eventListener.ConsoleLogger{}, eventListener.Options{}, false, false)
 	<-c
 }

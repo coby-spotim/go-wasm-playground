@@ -2,13 +2,15 @@ package dom
 
 import (
 	"syscall/js"
+
+	"github.com/coby-spotim/wasm-playground/internal/dom/eventListener"
 )
 
 type EventTarget struct {
 	value js.Value
 }
 
-func (e *EventTarget) AddEventListener(eventType string, listener EventListener, options EventListenerOptions, useCapture bool, wantsUntrusted bool) {
+func (e *EventTarget) AddEventListener(eventType string, listener eventListener.EventListener, options eventListener.Options, useCapture bool, wantsUntrusted bool) {
 	cb := js.FuncOf(func(this js.Value, args []js.Value) interface{} {
 		listener.HandleEvent(args[0])
 		return nil
