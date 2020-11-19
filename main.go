@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	c := make(chan bool, 1)
+	c := make(chan struct{}, 1)
 	window := dom.NewWindow()
 	document := dom.NewDocument(window)
 	window.Alert("Hello, World!")
