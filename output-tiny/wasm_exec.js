@@ -293,7 +293,7 @@
 					"syscall/js.finalizeRef": (sp) => {
             // Note: TinyGo does not support finalizers so this is only called
             // for one specific case, by js.go:jsString.
-            const id = mem().getUint32(v_addr, true);
+            const id = mem().getUint32(sp, true);
             this._goRefCounts[id]--;
             if (this._goRefCounts[id] === 0) {
               const v = this._values[id];
