@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/coby-spotim/wasm-playground/internal/dom"
-	"github.com/coby-spotim/wasm-playground/internal/dom/eventListener"
+	"github.com/probably-not/wasm-playground/internal/dom"
+	"github.com/probably-not/wasm-playground/internal/dom/eventListener"
 )
 
 func main() {
