@@ -3,7 +3,7 @@ package dom
 import (
 	"syscall/js"
 
-	"github.com/coby-spotim/wasm-playground/internal/dom/eventListener"
+	"github.com/probably-not/wasm-playground/internal/dom/eventListener"
 )
 
 type EventTarget struct {
